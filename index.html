@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOP2026 — Interactive Raman Spectra Explorer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0072B2, #56B4E9);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+    header p { font-size: 1rem; opacity: 0.9; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    .category {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+    .category h2 {
+      color: #0072B2;
+      border-bottom: 2px solid #56B4E9;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .category ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .category ul { grid-template-columns: 1fr; }
+    }
+    .category li a {
+      display: block;
+      padding: 0.6rem 1rem;
+      background: #f0f4f8;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #0072B2;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .category li a:hover {
+      background: #0072B2;
+      color: white;
+      transform: translateX(3px);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+    .qr-info {
+      text-align: center;
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+    .qr-info img {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AOP2026 — Interactive Raman Spectra Explorer</h1>
+    <p>WO<sub>3</sub> Gas-Sensing Raman — Triclinic Phase Fitting &amp; Peak Trend Analysis</p>
+  </header>
+
+  <div class="container">
+    <div class="qr-info">
+      <h2>Scan to Share</h2>
+      <p>QR code for this page:</p>
+      <img src="qr_code.png" alt="QR code to this page">
+      <p style="margin-top:0.5rem; font-size:0.85rem; color:#888;">https://anyjomo.github.io/aop2026/</p>
+    </div>
+
+  <section class="category">
+    <h2>Multi-Phase Explorer</h2>
+    <ul>
+      <li><a href="AOP2026_data/AOP2026_plotly_plots/spectrum_browser.html">Interactive Spectrum Browser (time slider)</a></li>
+      <li><a href="AOP2026_data/AOP2026_plotly_plots/peak_color_reference.html">Peak Colour Reference Swatch</a></li>
+      <li><a href="AOP2026_data/AOP2026_plotly_plots/all_peak_amplitudes_overlay.html">All Peak Amplitudes — Overlay</a></li>
+      <li><a href="AOP2026_data/AOP2026_plotly_plots/all_peak_positions_overlay.html">All Peak Positions — Overlay</a></li>
+      <li><a href="AOP2026_data/AOP2026_plotly_plots/correlation_heatmap.html">Peak Correlation Heatmap</a></li>
+    </ul>
+  </section>
+  <section class="category">
+    <h2>Triclinic Phase — Overview Plots</h2>
+    <ul>
+      <li><a href="triclinic/peak_amplitude_overview.html">Amplitude Overview (all peaks)</a></li>
+      <li><a href="triclinic/peak_position_overview.html">Position Overview (all peaks)</a></li>
+      <li><a href="triclinic/peak_fwhm_overview.html">FWHM Overview (all peaks)</a></li>
+      <li><a href="triclinic/peak_amplitude_waterfall.html">Amplitude Waterfall</a></li>
+      <li><a href="triclinic/peak_amplitude_waterfall_smoothed.html">Amplitude Waterfall (smoothed)</a></li>
+      <li><a href="triclinic/wo3_amplitude_overview.html">WO3 Amplitude Overview</a></li>
+      <li><a href="triclinic/wo3_position_overview.html">WO3 Position Overview</a></li>
+      <li><a href="triclinic/wo3_fwhm_overview.html">WO3 FWHM Overview</a></li>
+      <li><a href="triclinic/wo3_center_deviation_overview.html">WO3 Center Deviation Overview</a></li>
+      <li><a href="triclinic/carbon_amplitude_overview.html">Carbon Amplitude Overview</a></li>
+      <li><a href="triclinic/carbon_position_overview.html">Carbon Position Overview</a></li>
+      <li><a href="triclinic/carbon_fwhm_overview.html">Carbon FWHM Overview</a></li>
+      <li><a href="triclinic/spectra_waterfall_215_265s.html">Spectra Waterfall (215–265 s)</a></li>
+    </ul>
+  </section>
+  <section class="category">
+    <h2>Triclinic Phase — Per-Peak Trends</h2>
+    <ul>
+      <li><a href="triclinic/peak_amplitude_WO3_lattice_125.html">Amplitude — WO3 lattice 125 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_WO3_lattice_195.html">Amplitude — WO3 lattice 195 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_WO3_OWO_bend_280.html">Amplitude — WO3 O-W-O bend 280 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_WO3_OWO_bend_335.html">Amplitude — WO3 O-W-O bend 335 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_WO3_WO_stretch_718.html">Amplitude — WO3 W-O stretch 718 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_WO3_WO_stretch_810.html">Amplitude — WO3 W-O stretch 810 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_D_band_1331.html">Amplitude — D band 1331 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_G_band_1592.html">Amplitude — G band 1592 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_amplitude_Dprime_band_1615.html">Amplitude — D' band 1615 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_WO3_lattice_125.html">Position — WO3 lattice 125 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_WO3_lattice_195.html">Position — WO3 lattice 195 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_WO3_OWO_bend_280.html">Position — WO3 O-W-O bend 280 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_WO3_OWO_bend_335.html">Position — WO3 O-W-O bend 335 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_WO3_WO_stretch_718.html">Position — WO3 W-O stretch 718 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_WO3_WO_stretch_810.html">Position — WO3 W-O stretch 810 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_D_band_1331.html">Position — D band 1331 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_G_band_1592.html">Position — G band 1592 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_position_Dprime_band_1615.html">Position — D' band 1615 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_WO3_lattice_125.html">FWHM — WO3 lattice 125 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_WO3_lattice_195.html">FWHM — WO3 lattice 195 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_WO3_OWO_bend_280.html">FWHM — WO3 O-W-O bend 280 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_WO3_OWO_bend_335.html">FWHM — WO3 O-W-O bend 335 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_WO3_WO_stretch_718.html">FWHM — WO3 W-O stretch 718 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_WO3_WO_stretch_810.html">FWHM — WO3 W-O stretch 810 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_D_band_1331.html">FWHM — D band 1331 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_G_band_1592.html">FWHM — G band 1592 cm⁻¹</a></li>
+      <li><a href="triclinic/peak_fwhm_Dprime_band_1615.html">FWHM — D' band 1615 cm⁻¹</a></li>
+    </ul>
+  </section>
+
+  </div>
+
+  <footer>
+    AOP2026 Poster — Supplementary Interactive Material<br>
+    Powered by Plotly · Hosted on GitHub Pages
+  </footer>
+</body>
+</html>
