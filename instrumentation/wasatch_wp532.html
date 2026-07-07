@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wasatch Photonics WP 532 (ENLIGHTEN) — Instrument Configuration</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0072B2, #56B4E9);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+    header p { font-size: 0.95rem; opacity: 0.9; }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #0072B2;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    h3 {
+      color: #0072B2;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    .inst-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      background: white;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .inst-table td, .inst-table th {
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .inst-table td:first-child {
+      font-weight: 600;
+      color: #555;
+      width: 40%;
+    }
+    .inst-table .section-key {
+      font-weight: 700;
+      color: #0072B2;
+    }
+    .inst-table .sub-key {
+      font-weight: 400;
+      color: #777;
+      padding-left: 1.5rem;
+    }
+    .sub-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .sub-table td {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 0.3rem 0.5rem;
+      font-size: 0.85rem;
+    }
+    .notes pre {
+      background: white;
+      padding: 1rem;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 0.85rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wasatch Photonics WP 532 (ENLIGHTEN)</h1>
+    <p>Wasatch Photonics · Software: ENLIGHTEN</p>
+  </header>
+  <div class="container">
+    <a href="../index.html" class="back-link">&larr; Back to AOP2026 Explorer</a>
+    <h3>Instrument</h3>
+<table class="inst-table">
+<tbody>
+<tr><td>name</td><td>Wasatch Photonics WP 532 (ENLIGHTEN)</td></tr><tr><td>serial</td><td>—</td></tr><tr><td>vendor</td><td>Wasatch Photonics</td></tr><tr><td>software</td><td>ENLIGHTEN</td></tr>
+</tbody>
+</table>
+<h3>Excitation Source (Laser)</h3>
+<table class="inst-table">
+<tbody>
+<tr><td>wavelength_nm</td><td>532.0</td></tr><tr><td>wavelength_nm_measured</td><td>532.2</td></tr><tr><td>type</td><td>DPSS</td></tr><tr><td>linewidth_nm</td><td>0.05</td></tr><tr><td>M_squared</td><td>1.2</td></tr><tr><td>polarization</td><td>linear</td></tr><tr><td>max_power_mW</td><td>130.0</td></tr>
+</tbody>
+</table>
+<h3>Microscope / Focusing Optics</h3>
+<table class="inst-table">
+<tbody>
+<tr><td>numerical_aperture</td><td>0.4</td></tr><tr><td>objective_magnification</td><td>20</td></tr><tr><td>objective_working_distance_mm</td><td>12</td></tr><tr><td>spot_diameter_um</td><td>—</td></tr><tr><td>collection_geometry</td><td>180-degree backscatter</td></tr><tr><td class='section-key'>filter_set</td><td><table class='sub-table'><tr><td class='sub-key'>edge_filter_cuton_cm1</td><td>80</td></tr><tr><td class='sub-key'>notch_centre_nm</td><td>532.0</td></tr></table></td></tr>
+</tbody>
+</table>
+<h3>Spectrograph / Detector</h3>
+<table class="inst-table">
+<tbody>
+<tr><td>grating_lines_per_mm</td><td>1200</td></tr><tr><td>centre_wavelength_nm</td><td>720.0</td></tr><tr><td>spectral_resolution_cm1</td><td>6.0</td></tr><tr><td>wavenumber_range_cm1</td><td>80 – 3500</td></tr><tr><td>pixels</td><td>1024</td></tr><tr><td>detector</td><td>Si CCD (TEC-cooled)</td></tr><tr><td>detector_temperature_C</td><td>-15.0</td></tr>
+</tbody>
+</table>
+<h3>Default Acquisition Parameters</h3>
+<table class="inst-table">
+<tbody>
+<tr><td>integration_time_ms</td><td>5000</td></tr><tr><td>scan_averaging</td><td>3</td></tr><tr><td>preirr_dwell_s</td><td>60.0</td></tr><tr><td>acq_power_mW</td><td>5.0</td></tr>
+</tbody>
+</table>
+<h3>Calibration</h3>
+<table class="inst-table">
+<tbody>
+<tr><td>wavelength_standard</td><td>Hg/Ar atomic lines</td></tr><tr><td>intensity_standard</td><td>NIST SRM 2241 (Raman intensity)</td></tr><tr><td>last_calibration_date</td><td>—</td></tr>
+</tbody>
+</table>
+    <h3>Per-Material Configurations</h3>
+<table class="inst-table"><thead><tr><th>Material</th><th>Config Directory</th></tr></thead>
+<tbody><tr><td>WO3</td><td>WO3</td></tr><tr><td>GO</td><td>GO</td></tr><tr><td>WO3_GO</td><td>WO3_GO</td></tr></tbody></table>
+    <div class='notes'><h3>Notes</h3><pre>- All optical inputs feed `helpers.compute_fluence_table` which converts
+  the nominal mW power axis into calibrated peak irradiance [W/cm^2] and
+  cumulative fluence [J/cm^2] via the Gaussian beam waist.
+- Adjust `numerical_aperture`, `M_squared`, and `spot_diameter_um` to the
+  actual objective in use; the rest of the pipeline does not change.
+- Per-acquisition values (laser power, integration time, scan averaging)
+  are auto-extracted from ENLIGHTEN raw CSV metadata when present; the
+  `acquisition_defaults` block is only used as a fallback.
+</pre></div>
+  </div>
+  <footer>AOP2026 Poster — Instrument Configuration</footer>
+</body>
+</html>
