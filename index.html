@@ -69,19 +69,40 @@
       color: #888;
       font-size: 0.85rem;
     }
-    .qr-info {
+    .top-logo {
       text-align: center;
       background: white;
       border-radius: 8px;
-      padding: 1.5rem;
+      padding: 1.2rem;
       margin-bottom: 1.5rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     }
-    .qr-info img {
-      width: 200px;
-      height: 200px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+    .top-logo img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+    }
+    .logo-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 1rem 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .logo-bar img {
+      height: 45px;
+      width: auto;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .logo-bar img:hover {
+      opacity: 1;
+    }
+    @media (max-width: 600px) {
+      .logo-bar img { height: 32px; }
+      .logo-bar { gap: 0.5rem; }
     }
     .gallery-btn {
       display: inline-block;
@@ -210,11 +231,8 @@
   </header>
 
   <div class="container">
-    <div class="qr-info">
-      <h2>Scan to Share</h2>
-      <p>QR code for this page:</p>
-      <img src="qr_code.png" alt="QR code to this page">
-      <p style="margin-top:0.5rem; font-size:0.85rem; color:#888;">https://anyjomo.github.io/aop2026/</p>
+    <div class="top-logo">
+      <img src="logos/top-logo_aop2026_hori.png" alt="AOP2026">
     </div>
 
     <section class="category">
@@ -402,6 +420,16 @@
       </ul>
     </section>
 
+  </div>
+
+  <div class="logo-bar">
+    <img src="logos/1-universidade_aveiro_1_2500_2500.png" alt="Universidade de Aveiro">
+    <img src="logos/2-NOVA.png" alt="NOVA">
+    <img src="logos/3-2022_FCT_Logo_A_horizontal_preto.png" alt="FCT">
+    <img src="logos/4-PT Financiado pela Uniֶo Europeia_NEG.png" alt="Financiado pela União Europeia">
+    <img src="logos/5-LOGO CE_EN_RGB_VERTICAL_NEG.png" alt="Comissão Europeia">
+    <img src="logos/6-LOGO_REPUBLICA_PORTUGUESA-01.png" alt="República Portuguesa">
+    <img src="logos/7-PRR_Logotipos-black_hor.png" alt="PRR">
   </div>
 
   <footer>
