@@ -105,6 +105,50 @@
       .logo-bar img { height: 32px; }
       .logo-bar { gap: 0.5rem; }
     }
+    .image-gallery {
+      margin-bottom: 1.5rem;
+    }
+    .image-gallery h3 {
+      color: #0072B2;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      padding-left: 0.5rem;
+      border-left: 3px solid #56B4E9;
+    }
+    .image-scroll {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: 1rem 0.5rem;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .image-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .image-scroll::-webkit-scrollbar-track {
+      background: #f0f4f8;
+      border-radius: 4px;
+    }
+    .image-scroll::-webkit-scrollbar-thumb {
+      background: #56B4E9;
+      border-radius: 4px;
+    }
+    .image-scroll::-webkit-scrollbar-thumb:hover {
+      background: #0072B2;
+    }
+    .image-scroll img {
+      height: 250px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .image-scroll img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
   </style>
 </head>
 <body>
@@ -222,55 +266,48 @@
     </section>
 
     <section class="category">
-      <h2>Femto processed W<sub>np</sub> STEM — Batch Statistics</h2>
-      <ul>
-        <li><a href="tem/batch/batch_attribution_counts.png" target="_blank">Attribution Counts</a></li>
-        <li><a href="tem/batch/batch_circularity_hist_kde.png" target="_blank">Circularity Distribution (hist + KDE)</a></li>
-        <li><a href="tem/batch/batch_circularity_vs_size.png" target="_blank">Circularity vs Size</a></li>
-        <li><a href="tem/batch/batch_diameter_hist_kde.png" target="_blank">Diameter Distribution (hist + KDE)</a></li>
-        <li><a href="tem/batch/batch_material_content.png" target="_blank">Material Content</a></li>
-        <li><a href="tem/batch/batch_size_distribution.png" target="_blank">Size Distribution</a></li>
-        <li><a href="tem/batch/material_concentration_no_vacuum.png" target="_blank">Material Concentration (no vacuum)</a></li>
-        <li><a href="tem/batch/material_concentration_stacked_bar.png" target="_blank">Material Concentration (stacked bar)</a></li>
-      </ul>
-    </section>
+      <h2>Femto processed W<sub>np</sub> STEM</h2>
+      
+      <div class="image-gallery">
+        <h3>Batch Statistics</h3>
+        <div class="image-scroll">
+          <img src="tem/batch/batch_attribution_counts.png" alt="Attribution Counts" onclick="window.open(this.src, '_blank')">
+          <img src="tem/batch/batch_circularity_hist_kde.png" alt="Circularity Distribution (hist + KDE)" onclick="window.open(this.src, '_blank')">
+          <img src="tem/batch/batch_circularity_vs_size.png" alt="Circularity vs Size" onclick="window.open(this.src, '_blank')">
+          <img src="tem/batch/batch_diameter_hist_kde.png" alt="Diameter Distribution (hist + KDE)" onclick="window.open(this.src, '_blank')">
+          <img src="tem/batch/batch_material_content.png" alt="Material Content" onclick="window.open(this.src, '_blank')">
+          <img src="tem/batch/batch_size_distribution.png" alt="Size Distribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/batch/material_concentration_no_vacuum.png" alt="Material Concentration" onclick="window.open(this.src, '_blank')">
+        </div>
+      </div>
 
-    <section class="category">
-      <h2>Femto processed W<sub>np</sub> STEM — Per-Image Analysis</h2>
-      <ul>
-        <li><a href="tem/per_image/cover.png" target="_blank">Cover Image (overview)</a></li>
-        <li><a href="tem/per_image/176788834_attribution.png" target="_blank">176788834 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788834_morphology.png" target="_blank">176788834 — Morphology</a></li>
-        <li><a href="tem/per_image/176788837_attribution.png" target="_blank">176788837 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788837_morphology.png" target="_blank">176788837 — Morphology</a></li>
-        <li><a href="tem/per_image/176788849_attribution.png" target="_blank">176788849 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788849_morphology.png" target="_blank">176788849 — Morphology</a></li>
-        <li><a href="tem/per_image/176788852_attribution.png" target="_blank">176788852 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788852_morphology.png" target="_blank">176788852 — Morphology</a></li>
-        <li><a href="tem/per_image/176788855_attribution.png" target="_blank">176788855 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788855_morphology.png" target="_blank">176788855 — Morphology</a></li>
-        <li><a href="tem/per_image/176788858_attribution.png" target="_blank">176788858 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788858_morphology.png" target="_blank">176788858 — Morphology</a></li>
-        <li><a href="tem/per_image/176788861_attribution.png" target="_blank">176788861 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788861_morphology.png" target="_blank">176788861 — Morphology</a></li>
-        <li><a href="tem/per_image/176788864_attribution.png" target="_blank">176788864 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788864_morphology.png" target="_blank">176788864 — Morphology</a></li>
-        <li><a href="tem/per_image/176788867_attribution.png" target="_blank">176788867 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788867_morphology.png" target="_blank">176788867 — Morphology</a></li>
-        <li><a href="tem/per_image/176788870_attribution.png" target="_blank">176788870 — Material Attribution</a></li>
-        <li><a href="tem/per_image/176788870_morphology.png" target="_blank">176788870 — Morphology</a></li>
-        <li><a href="tem/per_image/176789011_segmentation.png" target="_blank">176789011 — Segmentation</a></li>
-      </ul>
-    </section>
-
-    <section class="category">
-      <h2>HRTEM — Lattice Fringe Analysis</h2>
-      <ul>
-        <li><a href="tem/hrtem/176788880.jpg" target="_blank">HRTEM Raw Image</a></li>
-        <li><a href="tem/hrtem/176788880_FFT.jpg" target="_blank">FFT (Fast Fourier Transform)</a></li>
-        <li><a href="tem/hrtem/176788880_IFFT.jpg" target="_blank">IFFT (Filtered Inverse FFT)</a></li>
-        <li><a href="tem/hrtem/176788880_IFFT_Profile.jpg" target="_blank">IFFT Profile (d-spacing measurement)</a></li>
-      </ul>
+      <div class="image-gallery">
+        <h3>Per-Image Analysis</h3>
+        <div class="image-scroll">
+          <img src="tem/per_image/cover.png" alt="Cover Image (overview)" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788834_attribution.png" alt="176788834 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788834_morphology.png" alt="176788834 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788837_attribution.png" alt="176788837 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788837_morphology.png" alt="176788837 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788849_attribution.png" alt="176788849 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788849_morphology.png" alt="176788849 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788852_attribution.png" alt="176788852 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788852_morphology.png" alt="176788852 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788855_attribution.png" alt="176788855 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788855_morphology.png" alt="176788855 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788858_attribution.png" alt="176788858 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788858_morphology.png" alt="176788858 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788861_attribution.png" alt="176788861 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788861_morphology.png" alt="176788861 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788864_attribution.png" alt="176788864 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788864_morphology.png" alt="176788864 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788867_attribution.png" alt="176788867 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788867_morphology.png" alt="176788867 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788870_attribution.png" alt="176788870 — Material Attribution" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176788870_morphology.png" alt="176788870 — Morphology" onclick="window.open(this.src, '_blank')">
+          <img src="tem/per_image/176789011_segmentation.png" alt="176789011 — Segmentation" onclick="window.open(this.src, '_blank')">
+        </div>
+      </div>
     </section>
 
     <section class="category">
