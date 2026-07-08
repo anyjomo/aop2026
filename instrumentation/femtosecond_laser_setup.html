@@ -102,11 +102,10 @@
         <div class="spec-item"><span class="label">Wavelength</span><br><span class="value">790 nm (near-infrared)</span></div>
         <div class="spec-item"><span class="label">Pulse duration</span><br><span class="value">130 femtoseconds</span></div>
         <div class="spec-item"><span class="label">Max pulse energy</span><br><span class="value">1.5 mJ per pulse</span></div>
-        <div class="spec-item"><span class="label">Repetition rate</span><br><span class="value">1 kHz (mode-locked, fixed)</span></div>
+        <div class="spec-item"><span class="label">Repetition rate</span><br><span class="value">1 kHz mode-locked</span></div>
         <div class="spec-item"><span class="label">Beam profile</span><br><span class="value">TEM<sub>00</sub> Gaussian, linear polarization</span></div>
-        <div class="spec-item"><span class="label">Power control</span><br><span class="value">Manual attenuator / pulse picker (0.01–1.0 mJ)</span></div>
+        <div class="spec-item"><span class="label">Power control</span><br><span class="value">Automatic attenuator (0.01–1.0 mJ)</span></div>
       </div>
-      <div class="highlight">Beam control is via a mechanical shutter (max 18 Hz) on the Y-axis PSO output. The laser itself runs mode-locked at 1 kHz and cannot be externally triggered.</div>
     </div>
 
     <div class="card">
@@ -118,7 +117,6 @@
         <div class="spec-item"><span class="label">Diffraction-limited spot</span><br><span class="value">&asymp; 0.59 &micro;m diameter (790 nm / 2&times;0.67)</span></div>
         <div class="spec-item"><span class="label">Collection geometry</span><br><span class="value">180&deg; backscatter</span></div>
       </div>
-      <div class="highlight">The 50&times; objective focuses the beam to a sub-micron spot, enabling true micro/nano-scale structuring of WO<sub>3</sub> and GO films.</div>
     </div>
 
     <div class="card">
@@ -134,7 +132,6 @@
         <div class="spec-item"><span class="label">Responsivity at 790 nm</span><br><span class="value">35.9 mA/W (EEPROM auto-read)</span></div>
         <div class="spec-item"><span class="label">Controller readout</span><br><span class="value">AO2 &rarr; Y.AI0 (0–2.5 V, range-independent)</span></div>
       </div>
-      <div class="highlight">AO2 is range-independent and wavelength-corrected: a single conversion formula (Power = AO2 / 2.5 V &times; full-scale) works for all power levels. The motorized filter wheel (Y.DO0/Y.DO1) controls attenuation; the PM103 only reads the resulting power.</div>
     </div>
 
     <div class="card">
@@ -150,12 +147,6 @@
         <div class="spec-item"><span class="label">Controller</span><br><span class="value">Aerotech Automation1-iSMC on XC2e</span></div>
         <div class="spec-item"><span class="label">Servo loop</span><br><span class="value">20 kHz</span></div>
       </div>
-      <div class="highlight">The encoder can resolve sub-nanometre displacement, but practical positioning is quantized to 1 &micro;m commands. Acceleration ramps are sinusoidal for smooth motion.</div>
-    </div>
-
-    <div class="card">
-      <h2>Spectroscopy</h2>
-      <p>Raman characterization of laser-machined regions is performed off-line using the dedicated Raman instruments listed on the main page (Wasatch WP 532 and Horiba LabRAM HR Evol). The micromachining station itself does not carry an integrated spectrometer.</p>
     </div>
 
   </div>
