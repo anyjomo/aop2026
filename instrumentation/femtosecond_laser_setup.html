@@ -123,13 +123,18 @@
 
     <div class="card">
       <h2>Power Measurement</h2>
-      <p>Inline power monitoring via a <strong>Thorlabs S120VC</strong> photodiode sensor and <strong>PM100D</strong> power meter console, read through the Y-axis analog input.</p>
+      <p>Inline power monitoring via a <strong>Thorlabs PM103</strong> interface with <strong>S120VC</strong> silicon photodiode sensor, calibrated at 790 nm (certificate #26147114921, 2026-05). A 1:1000 beam splitter samples 0.1% of the laser beam to the sensor.</p>
       <div class="specs">
-        <div class="spec-item"><span class="label">Sensor</span><br><span class="value">Thorlabs S120VC (Si photodiode)</span></div>
-        <div class="spec-item"><span class="label">Console</span><br><span class="value">Thorlabs PM100D (analog out 0–2 V)</span></div>
-        <div class="spec-item"><span class="label">Calibration (low power)</span><br><span class="value">mW = 153.5 &times; V + 11.5 (&le;40 mW)</span></div>
-        <div class="spec-item"><span class="label">Calibration (high power)</span><br><span class="value">mW = 203.9 &times; V + 60.9 (&ge;45 mW)</span></div>
+        <div class="spec-item"><span class="label">Interface</span><br><span class="value">Thorlabs PM103 (optical power meter)</span></div>
+        <div class="spec-item"><span class="label">Sensor head</span><br><span class="value">Thorlabs S120VC (Si photodiode, 200–1100 nm)</span></div>
+        <div class="spec-item"><span class="label">Power range</span><br><span class="value">50 nW – 20 mW (at sensor, 450–1100 nm band)</span></div>
+        <div class="spec-item"><span class="label">Analog output</span><br><span class="value">AO2: 0–2.5 V, 16-bit DAC, wavelength-corrected</span></div>
+        <div class="spec-item"><span class="label">Accuracy</span><br><span class="value">&plusmn;1% (AO2), &plusmn;3% (sensor, 440–980 nm)</span></div>
+        <div class="spec-item"><span class="label">Calibration</span><br><span class="value">DIN EN ISO 9001, all 21 ranges PASS</span></div>
+        <div class="spec-item"><span class="label">Responsivity at 790 nm</span><br><span class="value">35.9 mA/W (EEPROM auto-read)</span></div>
+        <div class="spec-item"><span class="label">Controller readout</span><br><span class="value">AO2 &rarr; Y.AI0 (0–2.5 V, range-independent)</span></div>
       </div>
+      <div class="highlight">AO2 is range-independent and wavelength-corrected: a single conversion formula (Power = AO2 / 2.5 V &times; full-scale) works for all power levels. The motorized filter wheel (Y.DO0/Y.DO1) controls attenuation; the PM103 only reads the resulting power.</div>
     </div>
 
     <div class="card">
