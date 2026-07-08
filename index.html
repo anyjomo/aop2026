@@ -168,11 +168,23 @@
 
     <section class="category">
       <h2>Femtosecond Laser Processing</h2>
-      <div style="text-align: center; margin: 1.5rem 0;">
-        <video width="320" height="240" controls loop muted autoplay style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-          <source src="femto.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="video-carousel" style="position: relative; text-align: center; margin: 1.5rem 0;">
+        <div class="video-slide" style="display: block;">
+          <video width="320" height="240" controls loop muted autoplay class="carousel-video" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+            <source src="femto.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p style="margin-top: 0.5rem; color: #555; font-size: 0.9rem;">Femtosecond Laser Processing</p>
+        </div>
+        <div class="video-slide" style="display: none;">
+          <video width="320" height="240" controls loop muted autoplay class="carousel-video" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+            <source src="uv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p style="margin-top: 0.5rem; color: #555; font-size: 0.9rem;">UV Processing</p>
+        </div>
+        <button onclick="prevVideo()" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">&#10094;</button>
+        <button onclick="nextVideo()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">&#10095;</button>
       </div>
     </section>
 
@@ -398,5 +410,35 @@
     AOP2026 Poster — Supplementary Interactive Material<br>
     Powered by Plotly · Hosted on GitHub Pages
   </footer>
+
+  <script>
+    let currentVideoIndex = 0;
+    const videoSlides = document.querySelectorAll('.video-slide');
+    const videos = document.querySelectorAll('.carousel-video');
+
+    function showVideo(index) {
+      videoSlides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+      videos.forEach((video, i) => {
+        if (i === index) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+      currentVideoIndex = index;
+    }
+
+    function nextVideo() {
+      const nextIndex = (currentVideoIndex + 1) % videoSlides.length;
+      showVideo(nextIndex);
+    }
+
+    function prevVideo() {
+      const prevIndex = (currentVideoIndex - 1 + videoSlides.length) % videoSlides.length;
+      showVideo(prevIndex);
+    }
+  </script>
 </body>
 </html>
